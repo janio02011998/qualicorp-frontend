@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-col cols="12" sm="6">
+    <v-col cols="12">
       <v-text-field
         v-model="inputField"
         label="Tarefa diária:"
@@ -11,7 +11,7 @@
     </v-col>
     <v-list flat subheader>
       <v-list-item-group multiple active-class="">
-        <div v-for="(task, index) in tasks" :key="index">
+        <div v-for="(task, index) in $store.state.tasks" :key="index">
           <Task :task="task" />
         </div>
       </v-list-item-group>
@@ -30,24 +30,14 @@ export default defineComponent({
   },
   data: () => ({
     inputField: null,
-    tasks: [
-      { title: "Ir ao mercado", completed: false },
-      { title: "Fazer lanche", completed: false },
-      { title: "Malhar", completed: false },
-      { title: "Buscar filha", completed: false },
-      { title: "Ir ao jogo", completed: false },
-    ],
   }),
-  methods:  {
+  methods: {
     handleAddTask() {
-      if(this.inputField) {
-        this.tasks.push({
-          title: this.inputField,
-          completed: false,
-        })
+      if (this.inputField) {
+        this.$store.commit("addTask", this.inputField);
         this.inputField = null;
       }
-    }
-  }
+    },
+  },
 });
 </script>
