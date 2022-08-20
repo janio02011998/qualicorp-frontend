@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer v-model="drawer" app height="100%">
       <v-list-item>
         <v-list-item-avatar>
           <v-img src="https://github.com/janio02011998.png"></v-img>
@@ -31,6 +31,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <Carousel></Carousel>
     </v-navigation-drawer>
 
     <v-app-bar
@@ -74,7 +75,10 @@
 </template>
 
 <script lang="ts">
+import Carousel from "@/components/Carousel.vue";
+
 export default {
+  components: { Carousel },
   data: () => ({
     drawer: null,
     items: [

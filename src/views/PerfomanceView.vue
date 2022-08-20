@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-list subheader three-line>
+    <v-list subheader three-line height="100%">
       <v-subheader>Desempenho</v-subheader>
 
       <v-list-item>
@@ -27,3 +27,4 @@
     <v-divider></v-divider>
   </div>
 </template>
+
