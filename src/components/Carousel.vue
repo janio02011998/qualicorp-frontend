@@ -4,7 +4,6 @@
     cycle
     height="180"
     hide-delimiter-background
-    show-arrows="false"
     show-arrows-on-hover
     id="carousel"
   >

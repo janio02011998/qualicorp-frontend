@@ -2,8 +2,9 @@
   <div>
     <v-col cols="12">
       <v-text-field
+        class="mt-4"
         v-model="inputField"
-        label="Tarefa diária:"
+        label="Insira suas tarefa:"
         outlined
         clearable
         @keyup.enter="handleAddTask"

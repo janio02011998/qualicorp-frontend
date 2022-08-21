@@ -16,9 +16,10 @@
             <v-list-item-title>{{ task.title }}</v-list-item-title>
           </v-list-item-content>
           <v-list-item-action>
-            <v-btn icon @click.stop="handleRemoveTask(task.id)">
+            <!-- <v-btn icon @click.stop="handleRemoveTask(task.id)">
               <v-icon color="red lighten-1">mdi-trash-can</v-icon>
-            </v-btn>
+            </v-btn> -->
+            <TaskMenu :task="task" />
           </v-list-item-action>
         </template>
       </v-list-item>
@@ -36,8 +37,12 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import TaskMenu from "@/components/TaskMenu.vue";
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  components: { TaskMenu },
   data: () => ({
     snackbar: false,
     text: "Tarefa removida.",
@@ -45,12 +50,12 @@ export default {
   }),
   props: ["task"],
   methods: {
-    handleRemoveTask(id) {
+    handleRemoveTask(id: number) {
       this.snackbar = true;
       this.$store.commit("deleteTask", id);
     },
   },
-};
+});
 </script>
 
 <style>
