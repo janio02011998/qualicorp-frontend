@@ -7,11 +7,11 @@
     </p>
     <center>
       <iframe
-        min-width="100%"
+        min-width="300"
         max-height="315"
         style="border-radius: 10px"
         src="https://www.youtube.com/embed/EE0s8I56FxY"
-        title="Playlist do YouTube"
+        title="Introduce qualicorp "
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -20,17 +20,17 @@
     <hr />
     <p>Ferramentas utilizadas:</p>
     <v-list>
-      <template v-for="item in tacnologias">
-        <v-list-item :key="item.titulo">
+      <div v-for="item in technology" :key="item.title">
+        <v-list-item>
           <v-list-item-avatar>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-title v-html="item.titulo"></v-list-item-title>
+            <v-list-item-title v-html="item.title"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-      </template>
+      </div>
     </v-list>
     <hr />
     <section>
@@ -52,50 +52,42 @@
 export default {
   data() {
     return {
-      tacnologias: [
+      technology: [
         {
-          titulo: "HTML",
+          title: "HTML",
           icon: "mdi-language-html5",
         },
         {
-          titulo: "Vue.js",
+          title: "Vue.js",
           icon: "mdi-vuejs",
         },
         {
-          titulo: "Vuetify",
+          title: "Vuetify",
           icon: "mdi-vuetify",
         },
         {
-          titulo: "VUEX",
+          title: "VUEX",
           icon: "mdi-vuejs",
         },
         {
-          titulo: "VueRouter",
+          title: "VueRouter",
           icon: "mdi-vuejs",
         },
         {
-          titulo: "Localbase DB",
-          icon: "mdi-database",
-        },
-        {
-          titulo: "Animate.css",
+          title: "Animate.css",
           icon: "mdi-transition",
         },
         {
-          titulo: "Drag and Drop",
+          title: "Drag and Drop",
           icon: "mdi-drag-variant",
         },
         {
-          titulo: "Git",
+          title: "Git",
           icon: "mdi-git",
         },
         {
-          titulo: "GitHub",
+          title: "GitHub",
           icon: "mdi-github",
-        },
-        {
-          titulo: "Netlify",
-          icon: "mdi-web",
         },
       ],
     };

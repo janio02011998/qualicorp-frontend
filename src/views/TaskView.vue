@@ -32,6 +32,9 @@ export default defineComponent({
   data: () => ({
     inputField: null,
   }),
+  created() {
+    this.$store.commit("getTasks");
+  },
   methods: {
     handleAddTask() {
       if (this.inputField) {

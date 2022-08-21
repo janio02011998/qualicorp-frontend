@@ -1,39 +1,18 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import state from './state';
+import mutations from './mutations';
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    tasks: [
-      { id: 1660950150918, title: "Ir ao mercado", completed: false },
-      { id: 1660950150919, title: "Fazer lanche", completed: false },
-      { id: 1660950150920, title: "Malhar", completed: false },
-      { id: 1660950150921, title: "Buscar filha", completed: false },
-      { id: 1660950150922, title: "Ir ao jogo", completed: false }
-    ]
-  },
+  state,
   getters: {
   },
-  mutations: {
-    addTask(state, title) {
-        if (title) {
-          state.tasks.push({
-            id: new Date().getTime(),
-            title,
-            completed: false,
-          });
-        }
-    },
-    deleteTask(state, id) {
-      state.tasks = state.tasks.filter(task => task.id !== id)
-    },
-    editTask(state, task) {
-      let oldTask = state.tasks.filter(item => item.id === task.id)[0]
-      oldTask.title = task.title;
-    }
-  },
+  mutations,
   actions: {
+
   },
   modules: {
   }
