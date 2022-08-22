@@ -3,6 +3,16 @@ import { Pie } from "vue-chartjs";
 
 export default {
   extends: Pie,
+  props: {
+    width: {
+      type: Number,
+      default: 290,
+    },
+    height: {
+      type: Number,
+      default: 290,
+    },
+  },
   mounted() {
     this.gradient = this.$refs.canvas
       .getContext("2d")
@@ -38,6 +48,8 @@ export default {
       {
         responsive: true,
         maintainAspectRatio: false,
+        width: 200,
+        height: 200,
       }
     );
   },

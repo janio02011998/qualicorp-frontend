@@ -6,7 +6,8 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
-            >Tarefas em aberto e concluídas.</v-list-item-subtitle
+            >Avaliação a cerca da abertura e conclusão de tarefas durante o
+            período do projeto.</v-list-item-subtitle
           >
         </v-list-item-content>
       </v-list-item>
