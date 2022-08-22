@@ -44,6 +44,7 @@ export default defineComponent({
       const newTask = {
         title: this.title,
         id: this.task.id,
+        completed: this.task.completed,
       };
 
       this.$store.commit("editTask", newTask);

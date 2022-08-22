@@ -9,6 +9,14 @@
         clearable
         @keyup.enter="handleAddTask"
       ></v-text-field>
+      <center>
+        <v-progress-circular
+          center
+          indeterminate
+          color="primary"
+          v-if="loading"
+        ></v-progress-circular>
+      </center>
     </v-col>
     <v-list flat subheader>
       <v-list-item-group multiple active-class="">
@@ -30,6 +38,7 @@ export default defineComponent({
     Task,
   },
   data: () => ({
+    loading: false,
     inputField: null,
   }),
   created() {
@@ -38,8 +47,10 @@ export default defineComponent({
   methods: {
     handleAddTask() {
       if (this.inputField) {
+        this.loading = true;
         this.$store.commit("addTask", this.inputField);
         this.inputField = null;
+        this.loading = false;
       }
     },
   },
