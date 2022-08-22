@@ -5,26 +5,26 @@
 
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title>Content filtering</v-list-item-title>
           <v-list-item-subtitle
-            >Set the content filtering level to restrict appts that can be
-            downloaded</v-list-item-subtitle
-          >
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>Password</v-list-item-title>
-          <v-list-item-subtitle
-            >Require password for purchase or use password to restrict
-            purchase</v-list-item-subtitle
+            >Tarefas em aberto e concluídas.</v-list-item-subtitle
           >
         </v-list-item-content>
       </v-list-item>
     </v-list>
-
     <v-divider></v-divider>
+    <center>
+      <PieChart />
+    </center>
   </div>
 </template>
 
+<script lang="ts">
+import PieChart from "@/components/PieChart.vue";
+
+export default {
+  name: "App",
+  components: {
+    PieChart,
+  },
+};
+</script>
