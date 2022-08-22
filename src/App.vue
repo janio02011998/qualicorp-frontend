@@ -1,16 +1,20 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app height="100%">
-      <v-list-item>
-        <v-list-item-avatar>
-          <v-img src="https://github.com/janio02011998.png"></v-img>
-        </v-list-item-avatar>
+      <v-img
+        src="https://www.corretoracedro.com.br/blog/wp-content/uploads/2019/09/qualicorp-plano-de-saude.png"
+      >
+        <v-list-item>
+          <v-list-item-avatar size="60">
+            <v-img src="https://github.com/janio02011998.png"></v-img>
+          </v-list-item-avatar>
 
-        <v-list-item-content>
-          <v-list-item-title>Janio Carvalho</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-
+          <v-list-item-content>
+            <v-list-item-title>Janio Carvalho</v-list-item-title>
+            <v-list-item-subtitle>FullStack Developer</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-img>
       <v-divider></v-divider>
 
       <v-divider></v-divider>
@@ -50,22 +54,7 @@
       </template>
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <!-- <v-app-bar-title>Qualicorp challenge</v-app-bar-title> -->
-
       <v-spacer></v-spacer>
-      <!-- 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn> -->
     </v-app-bar>
 
     <v-main>
