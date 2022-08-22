@@ -20,13 +20,13 @@ Projeto desenvolvido para o desafio de front-end da qualicorp.
 Habilite o navegador como dispotivo modal para aprimorar a experiência.
 
 
-<img src="./src/assets/home.png" height="180"/>
+<img src="./src/assets/home.png" height="360"/>
   * Tela inicial com possibilidade de adição, remoção e atualização de tarefas.
 
-<img src="./src/assets/chart.png" height="180"/>
+<img src="./src/assets/chart.png" height="360"/>
   * Desempenho mediante as tarefas lançadas e finalizadas.
 
-<img src="./src/assets/about.png" height="180"/>
+<img src="./src/assets/about.png" height="360"/>
   * Informações adicionais sobre a implementação do projeto.
 
 * **Dificuldades**
