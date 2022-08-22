@@ -51,6 +51,7 @@ export default defineComponent({
         this.$store.commit("addTask", this.inputField);
         this.inputField = null;
         this.loading = false;
+        setTimeout(() => window.location.reload(), 1000);
       }
     },
   },

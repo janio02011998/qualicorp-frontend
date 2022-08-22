@@ -35,6 +35,7 @@ export default defineComponent({
     handleDelete() {
       this.$store.commit("deleteTask", this.id);
       this.$emit("closeModal");
+      setTimeout(() => window.location.reload(), 1000);
     },
   },
 });

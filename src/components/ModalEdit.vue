@@ -49,6 +49,7 @@ export default defineComponent({
 
       this.$store.commit("editTask", newTask);
       this.$emit("closeModal");
+      setTimeout(() => window.location.reload(), 1000);
     },
   },
 });
