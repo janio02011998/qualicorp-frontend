@@ -11,9 +11,7 @@
         max-height="315"
         style="border-radius: 10px"
         src="https://www.youtube.com/embed/EE0s8I56FxY"
-        title="Introduce qualicorp "
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
     </center>
@@ -72,14 +70,6 @@ export default {
         {
           title: "VueRouter",
           icon: "mdi-vuejs",
-        },
-        {
-          title: "Animate.css",
-          icon: "mdi-transition",
-        },
-        {
-          title: "Drag and Drop",
-          icon: "mdi-drag-variant",
         },
         {
           title: "Git",
