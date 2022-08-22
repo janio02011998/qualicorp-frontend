@@ -3,7 +3,7 @@
     <v-card elevation="2" tile>
       <v-list-item
         :class="{ 'blue lighten-4': task.completed }"
-        @click="task.completed = !task.completed"
+        @click="handleToSave(task)"
       >
         <template v-slot:default="{}">
           <v-list-item-action>
@@ -27,6 +27,7 @@
 
 <script lang="ts">
 import TaskMenu from "@/components/TaskMenu.vue";
+import { ITasks } from "@/interfaces/Tasks";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -34,6 +35,17 @@ export default defineComponent({
   data: () => ({}),
   props: ["task"],
   methods: {
+    handleToSave(task: ITasks) {
+      const newTask = {
+        title: task.title,
+        id: task.id,
+        completed: !this.task.completed,
+      };
+
+      this.$store.commit("editTask", newTask);
+      this.$emit("closeModal");
+      setTimeout(() => window.location.reload(), 1000);
+    },
     handleRemoveTask(id: number) {
       this.$store.commit("deleteTask", id);
     },
