@@ -78,6 +78,9 @@
 import Carousel from "@/components/Carousel.vue";
 
 export default {
+  metaInfo: {
+    title: "Qualicorp - Task Manager",
+  },
   components: { Carousel },
   data: () => ({
     drawer: null,

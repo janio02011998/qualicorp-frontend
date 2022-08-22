@@ -1,10 +1,13 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
+import VueMeta from 'vue-meta'
+
 import TaskView from '@/views/TaskView.vue';
 import AboutView from '@/views/AboutView.vue';
 import PerfomanceView from '@/views/PerfomanceView.vue';
 
 Vue.use(VueRouter);
+Vue.use(VueMeta);
 
 const routes: Array<RouteConfig> = [
   {
